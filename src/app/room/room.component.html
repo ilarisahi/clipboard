@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="room-container">
+    <h3>Room code: <span class="badge badge-primary">{{roomId}}</span></h3>
+    <h4>Users in this room:</h4>
+    <h4><span *ngFor="let username of usernames" class="badge badge-primary">{{username}}</span></h4>
+    <div class="input-group input-group-lg">
+      <input type="text" #pastedData (paste)="onPaste($event)" class="form-control" placeholder="Paste something here...">
+      <div class="input-group-append">
+        <button (click)="copy()" class="btn btn-outline-primary" type="button">Copy</button>
+      </div>
+    </div>
+    <button type="button" (click)="leave()" class="btn btn-danger btn-lg btn-block">Leave room</button>
+  </div>
+</div>

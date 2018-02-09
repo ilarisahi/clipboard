@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="home-container">
+    <button type="button" (click)="newRoom()" class="btn btn-primary btn-lg btn-block">Create a new room</button>
+    <div class="join-room">
+      <form>
+        <div class="input-group input-group-lg">
+            <input type="text" class="form-control" placeholder="Enter room code" name="roomCode" [(ngModel)]="roomCode">
+        </div>
+        <button type="submit" (click)="joinRoom(roomCode)" class="btn btn-primary btn-lg btn-block">Join a room</button>
+      </form>      
+    </div>
+    <button type="button" (click)="logout()" class="btn btn-danger btn-lg btn-block">Logout</button>
+  </div>  
+</div>

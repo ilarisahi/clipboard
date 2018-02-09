@@ -1,0 +1,41 @@
+﻿<div class="container">
+  <div class="login-container">
+    <ngb-tabset type="pills">
+        <ngb-tab title="Login">
+          <ng-template ngbTabContent>
+            <form (ngSubmit)="onLoginSubmit()" #loginForm="ngForm">
+              <div class="form-group">
+                <label for="login-username">Username</label>
+                <input type="text" class="form-control" id="login-username" placeholder="Enter username" [(ngModel)]="login.username" name="loginUsername" #loginUsername="ngModel">
+              </div>
+              <div class="form-group">
+                <label for="login-password">Password</label>
+                <input type="password" class="form-control" id="login-password" placeholder="Password" [(ngModel)]="login.password" name="loginPassword" #loginPassword="ngModel">
+              </div>
+              <button type="submit" class="btn btn-default">Sign in!</button>
+            </form>
+          </ng-template>
+        </ngb-tab>
+        <ngb-tab>
+          <ng-template ngbTabTitle><b>Register</b></ng-template>
+          <ng-template ngbTabContent>
+            <form (ngSubmit)="onRegisterSubmit()" #registerForm="ngForm">
+              <div class="form-group">
+                <label for="register-username">Username</label>
+                <input type="text" class="form-control" id="register-username" placeholder="Enter username" [(ngModel)]="register.username" name="registerUsername" #registerUsername="ngModel">
+              </div>
+              <div class="form-group">
+                <label for="register-password">Password</label>
+                <input type="password" class="form-control" id="register-password" placeholder="Enter password" [(ngModel)]="register.password" name="registerPassword" #registerPassword="ngModel">
+              </div>
+              <div class="form-group">
+                <label for="register-password-confirm">Confirm password</label>
+                <input type="password" class="form-control" id="register-password-confirm" placeholder="Enter password again" [(ngModel)]="register.passwordConfirm" name="registerPasswordConfirm" #registerPasswordConfirm="ngModel">
+              </div>
+              <button type="submit" class="btn btn-default">Register!</button>
+            </form>
+          </ng-template>
+        </ngb-tab>
+      </ngb-tabset>
+  </div>  
+</div>
